@@ -32,20 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/Screenshot%202023-05-17%20193719.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/componentwithsignupform-2oQ-KKFVlu](https://www.frontendmentor.io/solutions/componentwithsignupform-2oQ-KKFVlu)
+- Live Site URL: [https://tahobbit11.github.io/component-with-signup-form/](https://tahobbit11.github.io/component-with-signup-form/)
 
 ## My process
 
@@ -56,59 +48,84 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned how to check user inputs to see if everything is good or not. If it isn't that is where the code detects that and shows and error mesage just below the input box.
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+      <div class="input-wrapper">
+        <div class="deal">
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+        <div class="information">
+          <div class="input-info">
+            <input type="text" id="first-name" placeholder="First Name">
+            <p class="first-name-error hide">First Name cannot be empty</p>
+          </div>
+          <div class="input-info">
+            <input type="text" id="last-name" placeholder="Last Name">
+            <p class="last-name-error hide">Last Name cannot be empty</p> 
+          </div>
+          <div class="input-info">
+            <input type="text" id="email" placeholder="Email Address">
+            <p class="email-error hide">Looks like this is not an email</p>
+          </div>
+          <div class="input-info">
+            <input type="text" id="password" placeholder="Password">
+            <p class="password-error hide">Password cannot be empty</p>
+          </div>
+          <div>
+            <button class="trial-button">Claim your free trial</button>
+          </div>
+          <div class="terms-services">
+            <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+          </div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+     .deal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(248, 32%, 49%);
+        box-shadow: 0 8px #db6466;
+        border-radius: 10px;
+        padding: 5px 50px;
+        margin-bottom: 20px;
+     }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+button.addEventListener("click", function(e){
+    e.preventDefault();
+
+    if(e) {
+        firstNameError.style.display = 'none';
+        lastNameError.style.display = 'none';
+        emailError.style.display = 'none';
+        passwordError.style.display = 'none';
+        firstName.style.border = '1px solid lightgrey';
+        lastName.style.border = '1px solid lightgrey';
+        email.style.border = '1px solid lightgrey';
+        password.style.border = '1px solid lightgrey';
+    };
+
+    let first = firstNameCheck();
+    let last = lastNameCheck();
+    let mail = emailCheck();
+    let pass = passwordCheck();
+
+    if(!first || !last || !mail || !pass){
+        return
+    };
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I could come back and do something with the names to make sure I get confirmation that its a real name and not just numbers etc.
 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@tahobbit11](https://www.frontendmentor.io/profile/tahobbit11)
